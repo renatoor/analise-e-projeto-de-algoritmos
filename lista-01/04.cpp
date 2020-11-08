@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 	while (ifs.good()) {
 		char c = ifs.get();
 
-		switch (c) {
+		switch (tolower(c)) {
 			case 'a':
 			case 'e':
 			case 'i':
