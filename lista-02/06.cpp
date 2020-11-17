@@ -61,7 +61,6 @@ void remove_car(linked_list<car> &list, std::string plate) {
 			break;
 		}
 
-		c.inc_maneuvers();
 		aux_list.push(c);
 	}
 
@@ -71,6 +70,7 @@ void remove_car(linked_list<car> &list, std::string plate) {
 
 	while (!aux_list.is_empty()) {
 		car c = aux_list.pop();
+		if (found) c.inc_maneuvers();
 		list.push(c);
 	}
 }
